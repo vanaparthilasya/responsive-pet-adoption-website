@@ -33,3 +33,7 @@ responsive-pet-adoption-website/
 ## Author
 
 Lasya Vanaparthi
+
+## Preview
+
+![Project Preview](preview.png)
