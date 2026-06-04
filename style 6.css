@@ -1,0 +1,72 @@
+.container{
+     height: 300px;
+     width: 600px;
+     background-color:pink;
+     display: grid;
+     /*grid-template-rows:50px 50px 50px 50px 50px;
+     grid-template-columns:200px 200px 200px;*/
+     grid-template-rows: repeat(5 , 1fr);
+     grid-template-columns: repeat(3 , 1fr);
+     /*row-gap: 10px;
+     column-gap: 10px;
+     grid-gap:row-gap column-gap;*/
+     grid-gap: 10px 10px;
+     justify-items:center;
+     align-items: center;
+     
+
+}
+.item{
+    width: 100px;
+    height: 50px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+}
+.one{
+    /*grid-column-start: 1 ;
+    grid-column-end:3;*/
+    grid-column: 1/span 2;
+    grid-row: 1/span 3;
+    justify-self: end;
+    align-self:center ;
+}
+.box{
+    width: 300px;
+    height: 100px;
+    background-color: pink;
+    animation-name: fontanimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: 3;
+    animation-direction:alternate  ;
+}
+@keyframes fontanimate{
+    from{font-size:20px;}
+    to{font-size:40px;}
+    /*0%{font-size:20px;}
+    20%{font-size:20px;}
+    100%{font-size:40px;}*/
+}
+h2{
+    background-color: yellow;
+    border: 2px solid black;
+}
+@media(min-width:400px){
+    h2{
+        background-color: red;
+    }
+}
+/* 
+    (width: )                      - standard with when this width show up then only the media properties showup
+    (min-width: )                  - the width given from there if the width decreases the media properties doesnt show up
+    (max-width: )                  - the width given from there if the width increases the media properties doesnt show up
+    (min-width: )and(max-width: )  -the min width given to max width given at that range only we can see the media changes
+*/
+@media(orientation:landscape){
+    h2{
+        background-color: aqua;
+        color: brown;
+    }
+}
